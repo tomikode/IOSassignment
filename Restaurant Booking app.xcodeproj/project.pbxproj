@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4392CD3A2830B1A500161E88 /* BookingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392CD392830B1A500161E88 /* BookingScreen.swift */; };
 		A8C3045D281E4E63002F7CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C3045C281E4E63002F7CEF /* AppDelegate.swift */; };
 		A8C3045F281E4E63002F7CEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C3045E281E4E63002F7CEF /* SceneDelegate.swift */; };
 		A8C30461281E4E63002F7CEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C30460281E4E63002F7CEF /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4392CD392830B1A500161E88 /* BookingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingScreen.swift; sourceTree = "<group>"; };
 		A8C30459281E4E63002F7CEF /* Restaurant Booking app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurant Booking app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C3045C281E4E63002F7CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C3045E281E4E63002F7CEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				A8C3045C281E4E63002F7CEF /* AppDelegate.swift */,
 				A8C3045E281E4E63002F7CEF /* SceneDelegate.swift */,
 				A8C30460281E4E63002F7CEF /* ViewController.swift */,
+				4392CD392830B1A500161E88 /* BookingScreen.swift */,
 				A8C30462281E4E63002F7CEF /* Main.storyboard */,
 				A8C30465281E4E6A002F7CEF /* Assets.xcassets */,
 				A8C30467281E4E6A002F7CEF /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				A8C30461281E4E63002F7CEF /* ViewController.swift in Sources */,
 				A8C3045D281E4E63002F7CEF /* AppDelegate.swift in Sources */,
 				A8C3045F281E4E63002F7CEF /* SceneDelegate.swift in Sources */,
+				4392CD3A2830B1A500161E88 /* BookingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
