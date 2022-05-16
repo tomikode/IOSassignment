@@ -14,9 +14,7 @@ class BookingScreen: UIViewController {
     @IBOutlet weak var tableForPersonsLabel: UILabel!
     @IBOutlet weak var dateBookingLabel: UILabel!
     @IBOutlet weak var timeBookingLabel: UILabel!
-    
     @IBOutlet weak var infoBookingView: UIView!
-    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var confirmButton: UIButton!
     
     override func viewDidLoad() {
@@ -28,7 +26,6 @@ class BookingScreen: UIViewController {
         infoBookingView.layer.cornerRadius = 24
         infoBookingView.layer.borderWidth = 1
         infoBookingView.layer.borderColor = UIColor.black.cgColor
-        cancelButton.layer.cornerRadius = 12
         confirmButton.layer.cornerRadius = 12
     }
     
@@ -38,18 +35,6 @@ class BookingScreen: UIViewController {
         tableForPersonsLabel.text = "\(tableForPersons)"
         dateBookingLabel.text = date
         timeBookingLabel.text = time
-    }
-    
-    @IBAction func backAction(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
-    
-    @IBAction func cancelBooking(_ sender: UIButton) {
-        dismiss(animated: true)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
-            present(viewController, animated: true)
-        }
     }
     
     @IBAction func confirmBooking(_ sender: UIButton) {
