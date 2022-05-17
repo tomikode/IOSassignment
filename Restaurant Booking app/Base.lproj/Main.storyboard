@@ -175,18 +175,34 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pve-7H-ZHy">
+                                        <rect key="frame" x="103.5" y="125" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a date at least a day from now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqN-14-wrJ">
+                                        <rect key="frame" x="13.5" y="329" width="280" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="307" id="0pK-xB-ZBr"/>
                                     <constraint firstItem="yK6-ro-1Fn" firstAttribute="top" secondItem="ejj-z1-pcP" secondAttribute="bottom" constant="45" id="Apm-GJ-YKu"/>
                                     <constraint firstItem="yK6-ro-1Fn" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="C3T-1T-057"/>
+                                    <constraint firstItem="pve-7H-ZHy" firstAttribute="top" secondItem="ejj-z1-pcP" secondAttribute="bottom" constant="8" symbolic="YES" id="CK1-CD-fgp"/>
                                     <constraint firstItem="kum-gg-sR5" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="J7B-2e-345"/>
                                     <constraint firstItem="kum-gg-sR5" firstAttribute="top" secondItem="yK6-ro-1Fn" secondAttribute="bottom" constant="22" id="K18-GJ-JIk"/>
                                     <constraint firstItem="HNe-9v-zSm" firstAttribute="top" secondItem="035-5m-I4i" secondAttribute="top" constant="29" id="KSo-fm-7Jz"/>
                                     <constraint firstItem="ejj-z1-pcP" firstAttribute="top" secondItem="HNe-9v-zSm" secondAttribute="bottom" constant="29" id="L6d-J8-kHS"/>
+                                    <constraint firstItem="lqN-14-wrJ" firstAttribute="top" secondItem="yK6-ro-1Fn" secondAttribute="bottom" constant="142" id="cMc-vR-hru"/>
+                                    <constraint firstItem="pve-7H-ZHy" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="e8e-bk-TFO"/>
                                     <constraint firstItem="ejj-z1-pcP" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="ko0-OQ-mAq"/>
                                     <constraint firstItem="HNe-9v-zSm" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="pgH-ol-d0K"/>
+                                    <constraint firstItem="lqN-14-wrJ" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="qJv-UG-QsP"/>
                                     <constraint firstAttribute="height" constant="369" id="zlb-dO-tkm"/>
                                 </constraints>
                             </view>
@@ -202,6 +218,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="0mS-yR-ATH"/>
                     <connections>
+                        <outlet property="dateError" destination="lqN-14-wrJ" id="57H-pH-Rli"/>
+                        <outlet property="nameError" destination="pve-7H-ZHy" id="McT-gM-wEA"/>
+                        <outlet property="nextButton" destination="wTU-fy-RAz" id="F0I-Qy-S08"/>
                         <segue destination="tjd-F5-9Yb" kind="show" identifier="tableSegue" id="y3i-s0-u7n"/>
                     </connections>
                 </viewController>
@@ -458,6 +477,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
