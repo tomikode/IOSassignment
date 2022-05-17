@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rCt-gS-7zU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eSX-MW-PuM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -72,6 +72,9 @@
                                             <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="26"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="JQA-9F-HXa" kind="show" id="khW-NW-Idx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcJ-fX-KMv">
                                         <rect key="frame" x="40" y="280" width="219" height="51"/>
@@ -151,6 +154,48 @@
             </objects>
             <point key="canvasLocation" x="1302.8985507246377" y="-396.42857142857139"/>
         </scene>
+        <!--My Bookings-->
+        <scene sceneID="dza-kp-pit">
+            <objects>
+                <viewController id="JQA-9F-HXa" customClass="manageBookings" customModule="Restaurant_Booking_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="48I-We-gtP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dvb-K0-gqN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="n8G-he-1gu">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n8G-he-1gu" id="kJa-9L-bFa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EIv-le-GAx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dvb-K0-gqN" firstAttribute="top" secondItem="EIv-le-GAx" secondAttribute="top" id="RCV-3h-ddd"/>
+                            <constraint firstItem="Dvb-K0-gqN" firstAttribute="leading" secondItem="EIv-le-GAx" secondAttribute="leading" id="afP-mx-DiL"/>
+                            <constraint firstItem="EIv-le-GAx" firstAttribute="bottom" secondItem="Dvb-K0-gqN" secondAttribute="bottom" id="iuR-IR-gns"/>
+                            <constraint firstItem="EIv-le-GAx" firstAttribute="trailing" secondItem="Dvb-K0-gqN" secondAttribute="trailing" id="kgT-cM-buK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Bookings" id="TBQ-eC-w3x"/>
+                    <connections>
+                        <outlet property="tableView" destination="Dvb-K0-gqN" id="616-0G-3Go"/>
+                        <segue destination="rCt-gS-7zU" kind="show" identifier="showBookingDetails" id="Cms-8a-wdV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2c-5C-Qhf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303" y="269"/>
+        </scene>
         <!--Booking Screen-->
         <scene sceneID="nwk-kj-57m">
             <objects>
@@ -160,7 +205,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJD-DR-Ged">
-                                <rect key="frame" x="24" y="298.5" width="366" height="309.5"/>
+                                <rect key="frame" x="24" y="320.5" width="366" height="309.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="c6s-L0-hVQ">
                                         <rect key="frame" x="24" y="24" width="318" height="19.5"/>
@@ -344,6 +389,7 @@
                             <constraint firstItem="Ou0-0h-RRG" firstAttribute="trailing" secondItem="aJD-DR-Ged" secondAttribute="trailing" id="pTN-PV-zul"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Psj-Gi-fBA"/>
                     <connections>
                         <outlet property="confirmButton" destination="Ou0-0h-RRG" id="V2P-L3-Qtc"/>
                         <outlet property="dateBookingLabel" destination="fue-am-jvR" id="h8T-Se-nrY"/>

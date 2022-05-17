@@ -14,6 +14,7 @@
 		A8C30464281E4E63002F7CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C30462281E4E63002F7CEF /* Main.storyboard */; };
 		A8C30466281E4E6A002F7CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C30465281E4E6A002F7CEF /* Assets.xcassets */; };
 		A8C30469281E4E6A002F7CEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C30467281E4E6A002F7CEF /* LaunchScreen.storyboard */; };
+		EAD3ACAC2833CD6E00E72FAB /* manageBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD3ACAB2833CD6E00E72FAB /* manageBookings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A8C30465281E4E6A002F7CEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8C30468281E4E6A002F7CEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8C3046A281E4E6A002F7CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAD3ACAB2833CD6E00E72FAB /* manageBookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manageBookings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A8C30460281E4E63002F7CEF /* ViewController.swift */,
 				4392CD392830B1A500161E88 /* BookingScreen.swift */,
 				A8C30462281E4E63002F7CEF /* Main.storyboard */,
+				EAD3ACAB2833CD6E00E72FAB /* manageBookings.swift */,
 				A8C30465281E4E6A002F7CEF /* Assets.xcassets */,
 				A8C30467281E4E6A002F7CEF /* LaunchScreen.storyboard */,
 				A8C3046A281E4E6A002F7CEF /* Info.plist */,
@@ -145,6 +148,7 @@
 				A8C3045D281E4E63002F7CEF /* AppDelegate.swift in Sources */,
 				A8C3045F281E4E63002F7CEF /* SceneDelegate.swift in Sources */,
 				4392CD3A2830B1A500161E88 /* BookingScreen.swift in Sources */,
+				EAD3ACAC2833CD6E00E72FAB /* manageBookings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
