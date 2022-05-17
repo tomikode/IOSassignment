@@ -115,17 +115,17 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="68.973214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Name Time Controller-->
         <scene sceneID="P1j-c0-ntF">
             <objects>
-                <viewController storyboardIdentifier="Booking Name Time Screen" id="eME-cq-Btb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Booking Name Time Screen" id="eME-cq-Btb" customClass="NameTimeController" customModule="Restaurant_Booking_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERG-8h-ouh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTU-fy-RAz">
                                 <rect key="frame" x="79.5" y="746" width="255" height="52"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="kpu-pG-Ade"/>
                                     <constraint firstAttribute="height" constant="52" id="roj-dI-zpP"/>
@@ -137,6 +137,7 @@
                                 </state>
                                 <connections>
                                     <action selector="confirmBooking:" destination="rCt-gS-7zU" eventType="touchUpInside" id="kbz-HC-N97"/>
+                                    <action selector="nextClick:" destination="eME-cq-Btb" eventType="touchUpInside" id="zPn-y6-GRu"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="035-5m-I4i">
@@ -155,12 +156,18 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="nameEdit:forEvent:" destination="eME-cq-Btb" eventType="editingChanged" id="4By-FD-MoH"/>
+                                        </connections>
                                     </textField>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kum-gg-sR5">
                                         <rect key="frame" x="-6.5" y="209" width="320" height="127"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="127" id="Mwq-JB-Sts"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="dateEdit:forEvent:" destination="eME-cq-Btb" eventType="valueChanged" id="VEP-QF-NdP"/>
+                                        </connections>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking date and time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yK6-ro-1Fn">
                                         <rect key="frame" x="31.5" y="162" width="244" height="25"/>
@@ -194,10 +201,45 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0mS-yR-ATH"/>
+                    <connections>
+                        <segue destination="tjd-F5-9Yb" kind="show" identifier="tableSegue" id="y3i-s0-u7n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9su-Qd-gud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1302.8985507246377" y="-396.42857142857139"/>
+        </scene>
+        <!--Table Controller-->
+        <scene sceneID="gcO-Fs-JRm">
+            <objects>
+                <viewController storyboardIdentifier="Table Controller" id="tjd-F5-9Yb" customClass="TableController" customModule="Restaurant_Booking_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h3q-Gr-ddK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRM-eI-hBW">
+                                <rect key="frame" x="186" y="217" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEX-B4-35q">
+                                <rect key="frame" x="186" y="280" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1kH-YJ-hWV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uIV-C5-bRp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scb-a6-1WL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314" y="-396"/>
         </scene>
         <!--Booking Screen-->
         <scene sceneID="nwk-kj-57m">
@@ -410,6 +452,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
