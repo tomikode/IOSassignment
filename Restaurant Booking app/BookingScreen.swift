@@ -40,7 +40,7 @@ class BookingScreen: UIViewController {
     @IBAction func confirmBooking(_ sender: UIButton) {
         dismiss(animated: true)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "MenuController") as? MenuController {
             present(viewController, animated: true)
         }
     }
