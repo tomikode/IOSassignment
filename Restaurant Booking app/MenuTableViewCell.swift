@@ -12,6 +12,7 @@ class MenuTableViewCell: UITableViewCell {
     @IBOutlet var myLabel: UILabel!
     @IBOutlet var myImageView: UIImageView!
     @IBOutlet var descripLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
