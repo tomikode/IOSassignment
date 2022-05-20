@@ -14,6 +14,9 @@
 		A8C30464281E4E63002F7CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C30462281E4E63002F7CEF /* Main.storyboard */; };
 		A8C30466281E4E6A002F7CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C30465281E4E6A002F7CEF /* Assets.xcassets */; };
 		A8C30469281E4E6A002F7CEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C30467281E4E6A002F7CEF /* LaunchScreen.storyboard */; };
+		ACF3B2922834422A00DEC03F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3B2912834422900DEC03F /* MenuViewController.swift */; };
+		ACF3B295283449E500DEC03F /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3B293283449E500DEC03F /* MenuTableViewCell.swift */; };
+		ACF3B296283449E500DEC03F /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF3B294283449E500DEC03F /* MenuTableViewCell.xib */; };
 		EAD3ACAC2833CD6E00E72FAB /* manageBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD3ACAB2833CD6E00E72FAB /* manageBookings.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		A8C30465281E4E6A002F7CEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8C30468281E4E6A002F7CEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8C3046A281E4E6A002F7CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF3B2912834422900DEC03F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		ACF3B293283449E500DEC03F /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		ACF3B294283449E500DEC03F /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		EAD3ACAB2833CD6E00E72FAB /* manageBookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manageBookings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,11 +70,14 @@
 				A8C3045E281E4E63002F7CEF /* SceneDelegate.swift */,
 				A8C30460281E4E63002F7CEF /* ViewController.swift */,
 				4392CD392830B1A500161E88 /* BookingScreen.swift */,
+				ACF3B2912834422900DEC03F /* MenuViewController.swift */,
 				A8C30462281E4E63002F7CEF /* Main.storyboard */,
 				EAD3ACAB2833CD6E00E72FAB /* manageBookings.swift */,
 				A8C30465281E4E6A002F7CEF /* Assets.xcassets */,
 				A8C30467281E4E6A002F7CEF /* LaunchScreen.storyboard */,
 				A8C3046A281E4E6A002F7CEF /* Info.plist */,
+				ACF3B293283449E500DEC03F /* MenuTableViewCell.swift */,
+				ACF3B294283449E500DEC03F /* MenuTableViewCell.xib */,
 			);
 			path = "Restaurant Booking app";
 			sourceTree = "<group>";
@@ -133,6 +142,7 @@
 			files = (
 				A8C30469281E4E6A002F7CEF /* LaunchScreen.storyboard in Resources */,
 				A8C30466281E4E6A002F7CEF /* Assets.xcassets in Resources */,
+				ACF3B296283449E500DEC03F /* MenuTableViewCell.xib in Resources */,
 				A8C30464281E4E63002F7CEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8C30461281E4E63002F7CEF /* ViewController.swift in Sources */,
+				ACF3B2922834422A00DEC03F /* MenuViewController.swift in Sources */,
+				ACF3B295283449E500DEC03F /* MenuTableViewCell.swift in Sources */,
 				A8C3045D281E4E63002F7CEF /* AppDelegate.swift in Sources */,
 				A8C3045F281E4E63002F7CEF /* SceneDelegate.swift in Sources */,
 				4392CD3A2830B1A500161E88 /* BookingScreen.swift in Sources */,
