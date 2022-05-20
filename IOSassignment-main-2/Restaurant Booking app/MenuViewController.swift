@@ -12,7 +12,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     //data array for the menu where titles, prices, description of menu items can be changed
     let titleData = ["Pizza", "Pasta", "Lasagna", "Risotto", "Gelato"]
     let priceData = ["$24","$18","$19","$15","$8"]
-    let descripData = ["Try out our special pizza. It is topped with tomatoes, mozzarella and othere cheeses and other toppings of your choice. Contains milk and gluten", "Try out our special pasta. Home made pasta with tomato, olives, and basil. Contains milk and gluten", "Try out our special lasagna. It is topped with tomatoes, mozzarella and othere cheeses and other toppings of your choice. Contains milk and gluten ", "Try out our special risotto. It is topped with tomatoes, mozzarella and othere cheeses and other toppings of your choice. Contains milk and gluten", "Try out our special Gelato. Homemade by a family recipe. Contains milk and nuts" ]
+    let descripData = ["Try out our special pizza. It is topped with tomatoes, mozzarella and othere cheeses and other toppings of your choice. Contains milk and gluten", "Try out our special pasta. Home made pasta with tomato, olives, and basil. Contains milk and gluten", "Try out our special lasagna. It is topped with tomatoes, mozzarella and othere cheeses and other toppings of your choice. Contains milk and gluten ", "Try out our special risotto. It is topped with tomatoes, mozzarella and othere cheeses and other toppings of your choice. Contains milk and gluten", "Try out our special Gelato. Homemade by a family recipe. Contains milk and nuts"]
     let imagesF = [UIImage(named:"Pizza"), UIImage(named:"Pasta"), UIImage(named:"Lasagna"), UIImage(named:"Risotto"), UIImage(named:"Gelato")]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,4 +37,19 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.priceLabel.text = priceData[indexPath.row]
         return cell
     }
+    
+/*
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            let currentImage = imagesF[indexPath.row]
+            let imageCrop = currentImage!.getCropRatio()
+            return tableView.frame.width / imageCrop
+        }
+    }
+
+    // Determining the imaging ratio for images compatability for different devices
+    extension UIImage{
+        func getCropRatio() -> CGFloat{
+            let widthRatio = self.size.width / self.size.height
+            return widthRatio
+        }*/
 }
