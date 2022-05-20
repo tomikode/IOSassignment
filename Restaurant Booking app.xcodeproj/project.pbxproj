@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4392CD3A2830B1A500161E88 /* BookingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392CD392830B1A500161E88 /* BookingScreen.swift */; };
-		A84CDCAF283601EB00A8CF00 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84CDCAE283601EB00A8CF00 /* MenuController.swift */; };
+		A84CDCAF283601EB00A8CF00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84CDCAE283601EB00A8CF00 /* ViewController.swift */; };
+		A84CDCB12837695000A8CF00 /* BookSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84CDCB02837695000A8CF00 /* BookSuccess.swift */; };
 		A8ADA85228333B0D009382E4 /* NameTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ADA85128333B0D009382E4 /* NameTimeController.swift */; };
 		A8ADA854283343BD009382E4 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ADA853283343BC009382E4 /* TableController.swift */; };
 		A8C3045D281E4E63002F7CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C3045C281E4E63002F7CEF /* AppDelegate.swift */; };
@@ -20,7 +21,8 @@
 
 /* Begin PBXFileReference section */
 		4392CD392830B1A500161E88 /* BookingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingScreen.swift; sourceTree = "<group>"; };
-		A84CDCAE283601EB00A8CF00 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		A84CDCAE283601EB00A8CF00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A84CDCB02837695000A8CF00 /* BookSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSuccess.swift; sourceTree = "<group>"; };
 		A8ADA85128333B0D009382E4 /* NameTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTimeController.swift; sourceTree = "<group>"; };
 		A8ADA853283343BC009382E4 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		A8C30459281E4E63002F7CEF /* Restaurant Booking app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurant Booking app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,8 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				A8C3045C281E4E63002F7CEF /* AppDelegate.swift */,
-				A84CDCAE283601EB00A8CF00 /* MenuController.swift */,
+				A84CDCAE283601EB00A8CF00 /* ViewController.swift */,
 				A8C3045E281E4E63002F7CEF /* SceneDelegate.swift */,
+				A84CDCB02837695000A8CF00 /* BookSuccess.swift */,
 				A8ADA85128333B0D009382E4 /* NameTimeController.swift */,
 				A8ADA853283343BC009382E4 /* TableController.swift */,
 				4392CD392830B1A500161E88 /* BookingScreen.swift */,
@@ -151,7 +154,8 @@
 				A8C3045D281E4E63002F7CEF /* AppDelegate.swift in Sources */,
 				A8ADA85228333B0D009382E4 /* NameTimeController.swift in Sources */,
 				A8C3045F281E4E63002F7CEF /* SceneDelegate.swift in Sources */,
-				A84CDCAF283601EB00A8CF00 /* MenuController.swift in Sources */,
+				A84CDCB12837695000A8CF00 /* BookSuccess.swift in Sources */,
+				A84CDCAF283601EB00A8CF00 /* ViewController.swift in Sources */,
 				4392CD3A2830B1A500161E88 /* BookingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

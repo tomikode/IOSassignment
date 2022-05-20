@@ -87,9 +87,10 @@ class TableController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "confirmSegue") {
-            if let destVC = segue.destination as? MenuController {
-                print("yeet")
+            if let destVC = segue.destination as? ViewController {
                 destVC.navigationItem.setHidesBackButton(true, animated: true)
+                let success = BookSuccess()
+                destVC.view.addSubview(success)
             }
         }
     }
