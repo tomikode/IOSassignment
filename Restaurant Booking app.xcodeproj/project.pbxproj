@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4392CD3A2830B1A500161E88 /* BookingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392CD392830B1A500161E88 /* BookingScreen.swift */; };
+		A867F82628388877000A6930 /* NameTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867F82528388876000A6930 /* NameTimeController.swift */; };
+		A867F8282838889B000A6930 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867F8272838889B000A6930 /* TableController.swift */; };
+		A867F82A283888F2000A6930 /* BookSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867F829283888F2000A6930 /* BookSuccess.swift */; };
 		A8C3045D281E4E63002F7CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C3045C281E4E63002F7CEF /* AppDelegate.swift */; };
 		A8C3045F281E4E63002F7CEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C3045E281E4E63002F7CEF /* SceneDelegate.swift */; };
 		A8C30461281E4E63002F7CEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C30460281E4E63002F7CEF /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		4392CD392830B1A500161E88 /* BookingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingScreen.swift; sourceTree = "<group>"; };
+		A867F82528388876000A6930 /* NameTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTimeController.swift; sourceTree = "<group>"; };
+		A867F8272838889B000A6930 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
+		A867F829283888F2000A6930 /* BookSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSuccess.swift; sourceTree = "<group>"; };
 		A8C30459281E4E63002F7CEF /* Restaurant Booking app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurant Booking app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C3045C281E4E63002F7CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C3045E281E4E63002F7CEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,9 @@
 				A8C3046A281E4E6A002F7CEF /* Info.plist */,
 				ACF3B293283449E500DEC03F /* MenuTableViewCell.swift */,
 				ACF3B294283449E500DEC03F /* MenuTableViewCell.xib */,
+				A867F82528388876000A6930 /* NameTimeController.swift */,
+				A867F8272838889B000A6930 /* TableController.swift */,
+				A867F829283888F2000A6930 /* BookSuccess.swift */,
 			);
 			path = "Restaurant Booking app";
 			sourceTree = "<group>";
@@ -157,10 +166,13 @@
 				A8C30461281E4E63002F7CEF /* ViewController.swift in Sources */,
 				ACF3B2922834422A00DEC03F /* MenuViewController.swift in Sources */,
 				ACF3B295283449E500DEC03F /* MenuTableViewCell.swift in Sources */,
+				A867F8282838889B000A6930 /* TableController.swift in Sources */,
 				A8C3045D281E4E63002F7CEF /* AppDelegate.swift in Sources */,
 				A8C3045F281E4E63002F7CEF /* SceneDelegate.swift in Sources */,
 				4392CD3A2830B1A500161E88 /* BookingScreen.swift in Sources */,
 				EAD3ACAC2833CD6E00E72FAB /* manageBookings.swift in Sources */,
+				A867F82A283888F2000A6930 /* BookSuccess.swift in Sources */,
+				A867F82628388877000A6930 /* NameTimeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
