@@ -120,11 +120,11 @@
             <objects>
                 <viewController storyboardIdentifier="Booking Name Time Screen" id="eME-cq-Btb" customClass="NameTimeController" customModule="Restaurant_Booking_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERG-8h-ouh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTU-fy-RAz">
-                                <rect key="frame" x="79.5" y="692" width="255" height="52"/>
+                                <rect key="frame" x="79.5" y="746" width="255" height="52"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="kpu-pG-Ade"/>
@@ -141,7 +141,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="035-5m-I4i">
-                                <rect key="frame" x="53.5" y="12" width="307" height="369"/>
+                                <rect key="frame" x="53.5" y="100" width="307" height="369"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter name for booking:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNe-9v-zSm">
                                         <rect key="frame" x="26" y="29" width="255" height="25"/>
@@ -160,11 +160,14 @@
                                             <action selector="nameEdit:forEvent:" destination="eME-cq-Btb" eventType="editingChanged" id="4By-FD-MoH"/>
                                         </connections>
                                     </textField>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kum-gg-sR5">
-                                        <rect key="frame" x="-6.5" y="162" width="320" height="127"/>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="kum-gg-sR5">
+                                        <rect key="frame" x="-6.5" y="179" width="320" height="127"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="127" id="Mwq-JB-Sts"/>
                                         </constraints>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="662724000">
+                                            <!--2022-01-01 10:00:00 +0000-->
+                                        </date>
                                         <connections>
                                             <action selector="dateEdit:forEvent:" destination="eME-cq-Btb" eventType="valueChanged" id="VEP-QF-NdP"/>
                                         </connections>
@@ -181,8 +184,14 @@
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(reserve for 2 hours)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGg-CF-vcd">
+                                        <rect key="frame" x="75.5" y="190" width="156" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a date at least a day from now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqN-14-wrJ">
-                                        <rect key="frame" x="13.5" y="268" width="280" height="21"/>
+                                        <rect key="frame" x="13.5" y="285" width="280" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -193,16 +202,18 @@
                                     <constraint firstAttribute="width" constant="307" id="0pK-xB-ZBr"/>
                                     <constraint firstItem="yK6-ro-1Fn" firstAttribute="top" secondItem="ejj-z1-pcP" secondAttribute="bottom" constant="45" id="Apm-GJ-YKu"/>
                                     <constraint firstItem="yK6-ro-1Fn" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="C3T-1T-057"/>
-                                    <constraint firstItem="lqN-14-wrJ" firstAttribute="top" secondItem="yK6-ro-1Fn" secondAttribute="bottom" constant="81" id="C8E-oI-0jO"/>
+                                    <constraint firstItem="lqN-14-wrJ" firstAttribute="top" secondItem="yK6-ro-1Fn" secondAttribute="bottom" constant="98" id="C8E-oI-0jO"/>
                                     <constraint firstItem="pve-7H-ZHy" firstAttribute="top" secondItem="ejj-z1-pcP" secondAttribute="bottom" constant="8" symbolic="YES" id="CK1-CD-fgp"/>
                                     <constraint firstItem="kum-gg-sR5" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="J7B-2e-345"/>
                                     <constraint firstItem="HNe-9v-zSm" firstAttribute="top" secondItem="035-5m-I4i" secondAttribute="top" constant="29" id="KSo-fm-7Jz"/>
                                     <constraint firstItem="ejj-z1-pcP" firstAttribute="top" secondItem="HNe-9v-zSm" secondAttribute="bottom" constant="29" id="L6d-J8-kHS"/>
+                                    <constraint firstItem="IGg-CF-vcd" firstAttribute="top" secondItem="yK6-ro-1Fn" secondAttribute="bottom" constant="3" id="OLz-dI-Og0"/>
                                     <constraint firstItem="pve-7H-ZHy" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="e8e-bk-TFO"/>
-                                    <constraint firstItem="kum-gg-sR5" firstAttribute="top" secondItem="ejj-z1-pcP" secondAttribute="bottom" constant="45" id="eJg-uq-VAH"/>
+                                    <constraint firstItem="kum-gg-sR5" firstAttribute="top" secondItem="ejj-z1-pcP" secondAttribute="bottom" constant="62" id="eJg-uq-VAH"/>
                                     <constraint firstItem="ejj-z1-pcP" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="ko0-OQ-mAq"/>
                                     <constraint firstItem="HNe-9v-zSm" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="pgH-ol-d0K"/>
                                     <constraint firstItem="lqN-14-wrJ" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="qJv-UG-QsP"/>
+                                    <constraint firstItem="IGg-CF-vcd" firstAttribute="centerX" secondItem="035-5m-I4i" secondAttribute="centerX" id="uFs-fJ-Hjo"/>
                                     <constraint firstAttribute="height" constant="369" id="zlb-dO-tkm"/>
                                 </constraints>
                             </view>
@@ -233,17 +244,17 @@
             <objects>
                 <viewController storyboardIdentifier="Table Controller" id="tjd-F5-9Yb" customClass="TableController" customModule="Restaurant_Booking_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h3q-Gr-ddK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a table:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jac-tC-Q60">
-                                <rect key="frame" x="133" y="0.0" width="148" height="25"/>
+                                <rect key="frame" x="133" y="88" width="148" height="25"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oy-bL-gjK">
-                                <rect key="frame" x="79.5" y="724" width="255" height="52"/>
+                                <rect key="frame" x="79.5" y="778" width="255" height="52"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="tnG-LW-9bH"/>
@@ -261,10 +272,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ox1-oR-yH1">
-                                <rect key="frame" x="22" y="50" width="370" height="649"/>
+                                <rect key="frame" x="31.5" y="138" width="351" height="615"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofw-b8-dU4">
-                                        <rect key="frame" x="46" y="48.5" width="92.5" height="97.5"/>
+                                        <rect key="frame" x="44" y="46" width="87.5" height="92.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -282,7 +293,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-49-49h">
-                                        <rect key="frame" x="46.5" y="194.5" width="92" height="97.5"/>
+                                        <rect key="frame" x="44" y="184.5" width="87.5" height="92.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -300,7 +311,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OE-eU-dlZ">
-                                        <rect key="frame" x="46.5" y="357" width="277" height="97.5"/>
+                                        <rect key="frame" x="44" y="338" width="263" height="92.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -318,7 +329,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2L-zk-rAr">
-                                        <rect key="frame" x="231.5" y="194.5" width="92" height="97.5"/>
+                                        <rect key="frame" x="219.5" y="184.5" width="87.5" height="92.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -336,7 +347,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7w-LB-YXF">
-                                        <rect key="frame" x="231.5" y="48.5" width="92" height="97.5"/>
+                                        <rect key="frame" x="219.5" y="46" width="87.5" height="92.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -354,7 +365,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ci-pg-sfd">
-                                        <rect key="frame" x="46.5" y="503" width="277" height="97.5"/>
+                                        <rect key="frame" x="44" y="476.5" width="263" height="92.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -647,8 +658,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kQk-YY-xqy"/>
-        <segue reference="bug-EO-Xc2"/>
+        <segue reference="VER-E0-LA4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

@@ -35,6 +35,8 @@ class TableController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         confirmButton.isEnabled = false
+        bookings = loadBookings()
+        blockTables()
     }
 
     @IBAction func selectTable(sender: AnyObject){
@@ -43,7 +45,9 @@ class TableController: UIViewController {
         }
         let tables = [table1, table2, table3, table4, table5, table6]
         for table in tables {
-            table?.backgroundColor = .systemGreen
+            if (table?.backgroundColor != .black){
+                table?.backgroundColor = .systemGreen
+            }
         }
         table = button.tag
         button.backgroundColor = .blue
@@ -64,6 +68,7 @@ class TableController: UIViewController {
         }
         bookings.insert(newBooking, at: position)
         print(bookings)
+        writeBookings()
         self.performSegue(withIdentifier: "confirmSegue", sender: nil)
         
     }
@@ -83,6 +88,21 @@ class TableController: UIViewController {
         }
         
         return []
+    }
+    
+    func blockTables() {
+        for booking in bookings {
+            let endDate = Calendar.current.date(byAdding: .hour, value: 2, to: booking.date) ?? booking.date
+            if (date >= booking.date && date < endDate){
+                block(table: booking.table)
+            }
+        }
+    }
+    
+    func block(table: Int){
+        let tables = [table1, table2, table3, table4, table5, table6]
+        tables[table - 1]?.isEnabled = false
+        tables[table - 1]?.backgroundColor = .black
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
