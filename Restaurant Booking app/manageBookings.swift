@@ -26,10 +26,11 @@ extension manageBookings: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        performSegue(withIdentifier: "showBookingDetails", sender: self) //Segues into Booking Screen
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let bookingScreen = storyboard.instantiateViewController(withIdentifier: "BookingScreen") as! BookingScreen
+        bookingScreen.indexBooking = indexPath.row
+        navigationController?.pushViewController(bookingScreen, animated: true)
     }
-    
 }
 
 extension manageBookings: UITableViewDataSource {
