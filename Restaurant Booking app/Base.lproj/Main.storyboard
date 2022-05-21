@@ -120,11 +120,11 @@
             <objects>
                 <viewController storyboardIdentifier="Booking Name Time Screen" id="eME-cq-Btb" customClass="NameTimeController" customModule="Restaurant_Booking_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERG-8h-ouh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTU-fy-RAz">
-                                <rect key="frame" x="79.5" y="746" width="255" height="52"/>
+                                <rect key="frame" x="79.5" y="692" width="255" height="52"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="kpu-pG-Ade"/>
@@ -141,7 +141,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="035-5m-I4i">
-                                <rect key="frame" x="53.5" y="100" width="307" height="369"/>
+                                <rect key="frame" x="53.5" y="12" width="307" height="369"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter name for booking:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNe-9v-zSm">
                                         <rect key="frame" x="26" y="29" width="255" height="25"/>
@@ -244,17 +244,17 @@
             <objects>
                 <viewController storyboardIdentifier="Table Controller" id="tjd-F5-9Yb" customClass="TableController" customModule="Restaurant_Booking_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h3q-Gr-ddK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a table:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jac-tC-Q60">
-                                <rect key="frame" x="133" y="88" width="148" height="25"/>
+                                <rect key="frame" x="133" y="0.0" width="148" height="25"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oy-bL-gjK">
-                                <rect key="frame" x="79.5" y="778" width="255" height="52"/>
+                                <rect key="frame" x="79.5" y="724" width="255" height="52"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="tnG-LW-9bH"/>
@@ -272,10 +272,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ox1-oR-yH1">
-                                <rect key="frame" x="31.5" y="138" width="351" height="615"/>
+                                <rect key="frame" x="22" y="50" width="370" height="649"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofw-b8-dU4">
-                                        <rect key="frame" x="44" y="46" width="87.5" height="92.5"/>
+                                        <rect key="frame" x="46" y="48.5" width="92.5" height="97.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -293,7 +293,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-49-49h">
-                                        <rect key="frame" x="44" y="184.5" width="87.5" height="92.5"/>
+                                        <rect key="frame" x="46.5" y="194.5" width="92" height="97.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -311,7 +311,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OE-eU-dlZ">
-                                        <rect key="frame" x="44" y="338" width="263" height="92.5"/>
+                                        <rect key="frame" x="46.5" y="357" width="277" height="97.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -329,7 +329,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2L-zk-rAr">
-                                        <rect key="frame" x="219.5" y="184.5" width="87.5" height="92.5"/>
+                                        <rect key="frame" x="231.5" y="194.5" width="92" height="97.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -347,7 +347,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7w-LB-YXF">
-                                        <rect key="frame" x="219.5" y="46" width="87.5" height="92.5"/>
+                                        <rect key="frame" x="231.5" y="48.5" width="92" height="97.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -365,7 +365,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ci-pg-sfd">
-                                        <rect key="frame" x="44" y="476.5" width="263" height="92.5"/>
+                                        <rect key="frame" x="46.5" y="503" width="277" height="97.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -658,7 +658,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VER-E0-LA4"/>
+        <segue reference="y3i-s0-u7n"/>
+        <segue reference="bug-EO-Xc2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
