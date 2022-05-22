@@ -23,7 +23,6 @@ class BookSuccess: UIButton {
         self.layer.cornerRadius = 10
         self.setTitle("Booking Success!", for: .normal)
         self.setTitleColor(.white, for: .normal)
-        print(sheight/30)
         self.titleLabel?.font = UIFont(name: "Arial", size: sheight/40)
         disappear()
     }
