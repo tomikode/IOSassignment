@@ -11,20 +11,36 @@ class manageBookings: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    let bookings = ["Booking 1", "Booking 2", "Booking 3", "Booking 4", "Booking 5"] //Dummy cells for testing
+    var bookings: [Booking] = [] //Dummy cells for testing
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        bookings = loadBookings()
         tableView.delegate = self //Used for interactions in the Table View
         tableView.dataSource = self
+    }
+    
+    func writeBookings() {
+        let defaults = UserDefaults.standard;
+        defaults.set(try? PropertyListEncoder().encode(bookings), forKey: BOOKINGS_KEY)
+    }
+    
+    func loadBookings() -> [Booking] {
+        let defaults = UserDefaults.standard;
+
+        if let savedArray = defaults.value(forKey: BOOKINGS_KEY) as? Data {
+            if let bookings = try? PropertyListDecoder().decode(Array<Booking>.self, from: savedArray) {
+                return bookings
+            }
+        }
+        
+        return []
     }
 }
 
 extension manageBookings: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let bookingScreen = storyboard.instantiateViewController(withIdentifier: "BookingScreen") as! BookingScreen
@@ -48,10 +64,13 @@ extension manageBookings: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) //Using a previous available cell as a template for a new cell in Table View
+
+        let booking = bookings[indexPath.row]
+        let showDate = booking.date.formatted(date: .numeric, time: .shortened)
         
-        cell.textLabel?.text = bookings[indexPath.row]
+        cell.textLabel?.text = booking.name
+        cell.detailTextLabel?.text = showDate
         
         return cell
     }

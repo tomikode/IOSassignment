@@ -20,7 +20,6 @@ class NameTimeController: UIViewController {
         super.viewDidLoad()
         nextButton.isEnabled = false
         // Do any additional setup after loading the view.
-        Swift.print("works")
     }
 
     
@@ -31,8 +30,6 @@ class NameTimeController: UIViewController {
     
     @IBAction func dateEdit(_ sender: UIDatePicker, forEvent event: UIEvent) {
         date = sender.date
-        date = Calendar.current.date(byAdding: .hour, value: 10, to: date) ?? sender.date
-        print(date)
         checkValues()
     }
     
@@ -41,9 +38,7 @@ class NameTimeController: UIViewController {
     }
     
     func checkValues(){
-        var tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date())
-        tomorrow = Calendar.current.date(byAdding: .hour, value: 10, to: tomorrow!)
-        
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date())
         if (name == ""){
             nameError.text = "Enter a name"
         } else {

@@ -51,7 +51,6 @@ class TableController: UIViewController {
         }
         table = button.tag
         button.backgroundColor = .blue
-        print(table)
         confirmButton.isEnabled = true
         confirmButton.backgroundColor = .systemGreen
     }
@@ -67,10 +66,12 @@ class TableController: UIViewController {
             position += 1
         }
         bookings.insert(newBooking, at: position)
-        print(bookings)
         writeBookings()
-        self.performSegue(withIdentifier: "confirmSegue", sender: nil)
-        
+        let vc = self.navigationController
+        let rootvc = vc?.viewControllers[0]
+        let success = BookSuccess()
+        rootvc!.view.addSubview(success)
+        vc?.popToViewController(rootvc!, animated: true)
     }
     
     func writeBookings() {
@@ -103,16 +104,6 @@ class TableController: UIViewController {
         let tables = [table1, table2, table3, table4, table5, table6]
         tables[table - 1]?.isEnabled = false
         tables[table - 1]?.backgroundColor = .black
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "confirmSegue") {
-            if let destVC = segue.destination as? ViewController {
-                destVC.navigationItem.setHidesBackButton(true, animated: true)
-                let success = BookSuccess()
-                destVC.view.addSubview(success)
-            }
-        }
     }
     
 }

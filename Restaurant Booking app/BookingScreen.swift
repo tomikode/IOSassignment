@@ -17,6 +17,8 @@ class BookingScreen: UIViewController {
     @IBOutlet weak var cancelBooking: UIButton!
     
     var indexBooking: Int = 0
+    
+    var bookings: [Booking] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +35,20 @@ class BookingScreen: UIViewController {
     }
     
     func setupData() {
-        let bookings = loadBookings()
+        bookings = loadBookings()
         if !bookings.isEmpty && indexBooking < bookings.count {
             nameBookingLabel.text = bookings[indexBooking].name
             tableNumberLabel.text = "\(bookings[indexBooking].table)"
-            tableForPersonsLabel.text = "\(bookings[indexBooking].table)"
+            tableForPersonsLabel.text = "\(setupTable(table: bookings[indexBooking].table))"
             dateBookingLabel.text = bookings[indexBooking].date.formatted(date: .numeric, time: .shortened)
+        }
+    }
+    
+    func setupTable(table: Int) -> Int {
+        if (table <= 4){
+            return 4
+        } else {
+            return 8
         }
     }
     
@@ -46,8 +56,12 @@ class BookingScreen: UIViewController {
         removeBooking()
         let alert = UIAlertController(title: "Alert", message: "Booking canceled successfully", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel) { _ in
-            self.navigationController?.popViewController(animated: true)
+            let vc = self.navigationController
+            let lastvc = vc?.viewControllers[(vc?.viewControllers.count)! - 2]
+            lastvc?.loadView()
+            vc?.popViewController(animated: true)
         }
+        
         alert.addAction(action)
         present(alert, animated: true)
     }
@@ -65,7 +79,6 @@ class BookingScreen: UIViewController {
     }
     
     func removeBooking() {
-        var bookings = loadBookings()
         if indexBooking < bookings.count {
             bookings.remove(at: indexBooking)
             let defaults = UserDefaults.standard;
